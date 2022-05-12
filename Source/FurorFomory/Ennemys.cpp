@@ -32,3 +32,49 @@ void AEnnemys::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+//Geteur et assesseurs
+//Santé 
+int AEnnemys::getPV()
+{
+	return n_pv;
+}
+
+void AEnnemys::setPV(int s)
+{
+	n_pv = s;
+}
+
+
+//Dégats
+int AEnnemys::damage()
+{
+	return dgts;
+}
+
+void AEnnemys::damage(float d)
+{
+	dgts = d;
+}
+
+//Fonction d'application de dégats
+void AEnnemys::detectArme(WeaponsType flingue)
+{
+	switch (WeaponsType w = flingue)
+	{
+	case WeaponsType::EPEE:
+		if (GEngine)
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, FString::Printf(TEXT("EPEE")));
+		break;
+	case WeaponsType::HALLEBARDE:
+		if (GEngine)
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("HALLEBARDE")));
+		break;
+	case WeaponsType::LANCE:
+		if (GEngine)
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Blue, FString::Printf(TEXT("LANCE")));
+		break;
+	default:
+		break;
+	}
+}
+
