@@ -21,9 +21,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
 	float n_pv; //variable santé
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
 	float dgts; //variable dgts
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
+	bool mort; //variable dgts
 
 public:	
 	// Called every frame
@@ -35,7 +40,7 @@ public:
 	//Geteur et sesseur santé
 	int getPV();
 
-	void setPV(int s);
+	void setPV(float s);
 
 	int damage();
 
@@ -44,10 +49,13 @@ public:
 
 	//Fonction gestion de dégats
 	UFUNCTION(BlueprintCallable)
-	virtual void detectArme(WeaponsType flingue);
+	virtual void detectArme(WeaponsType flingue, float vie);
 
-	//Application des défats
+	//Application des dégats
 	//virtual void appliDamage(WeaponsType flingue);
+
+	UFUNCTION(BlueprintCallable)
+	virtual void detectDeath(float vie);
 
 
 };
