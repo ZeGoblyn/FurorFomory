@@ -62,21 +62,21 @@ void AEnnemys::detectArme(WeaponsType flingue, float vie)
 	switch (WeaponsType w = flingue)
 	{
 	case WeaponsType::EPEE:
-		if (GEngine)
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, FString::Printf(TEXT("EPEE")));
+		//if (GEngine)
+		//	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, FString::Printf(TEXT("EPEE")));
 		vie = vie - 2;
 		setPV(vie);
 
 		break;
 	case WeaponsType::HALLEBARDE:
-		if (GEngine)
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("HALLEBARDE")));
+		//if (GEngine)
+		//	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("HALLEBARDE")));
 		vie = vie - 4;
 		setPV(vie);
 		break;
 	case WeaponsType::LANCE:
-		if (GEngine)
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Blue, FString::Printf(TEXT("LANCE")));
+		//if (GEngine)
+		//	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Blue, FString::Printf(TEXT("LANCE")));
 		vie = vie - 1;
 		setPV(vie);
 		break;
