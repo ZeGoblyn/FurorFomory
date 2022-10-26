@@ -25,6 +25,9 @@ protected:
 	float n_pv; //variable santé
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
+		float n_pvMAX_grunt; //variable santé maximum
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
 	float dgts; //variable dgts
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character")
@@ -41,6 +44,10 @@ public:
 	int getPV();
 
 	void setPV(float s);
+
+	int getPVmax();
+
+	void setPVmax(float s);
 
 	int damage();
 
