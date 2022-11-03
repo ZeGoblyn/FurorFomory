@@ -44,7 +44,7 @@ void AEnnemys::setPV(float s)
 	n_pv = s;
 }
 
-// Santé
+// Santé grunt
 int AEnnemys::getPVmax()
 {
 	return n_pvMAX_grunt;
@@ -54,7 +54,6 @@ void AEnnemys::setPVmax(float s)
 {
 	n_pvMAX_grunt = s;
 }
-
 
 //Dégats
 int AEnnemys::damage()
